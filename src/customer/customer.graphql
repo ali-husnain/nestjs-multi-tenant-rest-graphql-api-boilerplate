@@ -1,0 +1,7 @@
+type Customer {
+  cid: Int!
+  first_name: String
+  last_name: String
+  store_id: Int
+  sub_id: Int
+}

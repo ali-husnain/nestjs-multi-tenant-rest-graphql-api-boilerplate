@@ -1,0 +1,33 @@
+type Query {
+  tickets: [Ticket]
+  ticket(id: ID!): Ticket
+}
+
+type Mutation {
+  createTicket(CreateTicketInput: CreateTicketInput): Ticket
+}
+
+type Ticket {
+  id: Int
+  order_id: String
+  customer_id: Int
+  store_id: Int
+  sub_id: Int
+  subtotal: Float
+  discount: Float
+  total_tax: Float
+  total: Float
+  customer: Customer
+}
+
+"""
+Test comment
+"""
+input CreateTicketInput {
+  order_id: String
+  customer_id: Int
+  subtotal: Float
+  discount: Float
+  total_tax: Float
+  total: Float
+}
